@@ -1,0 +1,62 @@
+.itinerary{
+  min-height:100vh;
+  display:flex;
+  background:#f8fafc;
+}
+
+.sidebar{
+  width:300px;
+  background:white;
+  padding:25px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.1);
+}
+
+.sidebar h2{
+  color:#2563EB;
+}
+
+.sidebar button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#2563EB;
+  color:white;
+  margin-top:20px;
+  cursor:pointer;
+}
+
+.city-card{
+  margin-top:20px;
+  padding:15px;
+  border-radius:12px;
+  background:#f1f5f9;
+  font-weight:bold;
+}
+
+.timeline{
+  flex:1;
+  padding:40px;
+}
+
+.day-card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  margin-bottom:25px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.day-card h2{
+  color:#2563EB;
+}
+
+.day-card p{
+  margin-top:10px;
+}
+
+.day-card span{
+  display:block;
+  margin-top:15px;
+  color:gray;
+}
