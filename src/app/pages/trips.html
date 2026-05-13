@@ -1,0 +1,27 @@
+<app-navbar></app-navbar>
+
+<div class="trips-container">
+
+  <h2>My Trips ✈️</h2>
+
+  <div *ngIf="trips.length === 0">
+    No trips found 😢
+  </div>
+
+  <div class="trip-card" *ngFor="let trip of trips">
+
+    <h3>{{ trip.trip_name }}</h3>
+
+    <p>{{ trip.description }}</p>
+
+    <p>
+      📅 {{ trip.start_date }} → {{ trip.end_date }}
+    </p>
+
+    <button (click)="deleteTrip(trip.id)">
+      Delete
+    </button>
+
+  </div>
+
+</div>

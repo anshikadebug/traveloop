@@ -1,23 +1,22 @@
+
 <div class="login-container">
 
-  <div class="overlay">
+  <h2>Login</h2>
 
-    <div class="login-card">
+  <input
+    type="email"
+    placeholder="Email"
+    [(ngModel)]="email"
+  />
 
-      <h1>Traveloop</h1>
+  <input
+    type="password"
+    placeholder="Password"
+    [(ngModel)]="password"
+  />
 
-      <p>Plan your dream trips</p>
-
-      <input type="email" placeholder="Enter Email">
-
-      <input type="password" placeholder="Enter Password">
-
-      <button routerLink="/dashboard">
-  Login
-</button>
-
-    </div>
-
-  </div>
+  <button (click)="login()">
+    Login
+  </button>
 
 </div>

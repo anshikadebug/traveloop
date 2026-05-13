@@ -1,15 +1,20 @@
 import { Routes } from '@angular/router';
-
-import { Login } from './pages/login/login';
+import { LoginComponent } from './pages/login/login';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { CreateTrip } from './pages/create-trip/create-trip';
-import { ItineraryBuilder } from './pages/itinerary-builder/itinerary-builder';
+import { MyTrips } from './pages/my-trips/my-trips';
 
 export const routes: Routes = [
 
   {
     path:'',
-    component: Login
+    redirectTo:'dashboard',
+    pathMatch:'full'
+  },
+
+  {
+    path:'login',
+   component: LoginComponent
   },
 
   {
@@ -23,8 +28,8 @@ export const routes: Routes = [
   },
 
   {
-    path:'itinerary',
-    component: ItineraryBuilder
+    path:'my-trips',
+    component: MyTrips
   }
 
 ];

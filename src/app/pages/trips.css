@@ -1,0 +1,19 @@
+.trips-container {
+  width: 600px;
+  margin: 40px auto;
+}
+
+.trip-card {
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}

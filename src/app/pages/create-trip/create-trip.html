@@ -1,25 +1,30 @@
-<div class="create-trip">
+<div class="create-trip-container">
 
-  <div class="trip-box">
+  <h1>Create New Trip ✈️</h1>
 
-    <h1>Create New Trip ✈️</h1>
+  <input
+    type="text"
+    placeholder="Trip Name"
+    [(ngModel)]="trip_name"
+  >
 
-    <p>Plan your next adventure</p>
+  <textarea
+    placeholder="Trip Description"
+    [(ngModel)]="description"
+  ></textarea>
 
-    <input type="text" placeholder="Trip Name">
+  <input
+    type="date"
+    [(ngModel)]="start_date"
+  >
 
-    <textarea placeholder="Trip Description"></textarea>
+  <input
+    type="date"
+    [(ngModel)]="end_date"
+  >
 
-    <label>Start Date</label>
-    <input type="date">
-
-    <label>End Date</label>
-    <input type="date">
-
-    <button routerLink="/itinerary">
-  Create Trip
-</button>
-
-  </div>
+  <button (click)="createTrip()">
+    Create Trip
+  </button>
 
 </div>

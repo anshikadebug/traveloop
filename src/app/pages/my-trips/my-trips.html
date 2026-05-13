@@ -1,0 +1,19 @@
+<h1>My Trips ✈️</h1>
+
+@for (trip of trips; track trip.id) {
+
+  <div>
+
+    <h2>{{ trip.trip_name }}</h2>
+
+    <p>{{ trip.description }}</p>
+
+    <p>
+      {{ trip.start_date }} to {{ trip.end_date }}
+    </p>
+
+    <hr>
+
+  </div>
+
+}
