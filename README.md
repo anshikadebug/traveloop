@@ -1,19 +1,28 @@
 # TravelLoop ✈️
 
-TravelLoop is a full-stack travel planning web application built using Angular, Node.js, Express, and MySQL.
+TravelLoop is a modern full-stack travel planning web application built using Angular, Node.js, Express.js, and MySQL.
 
-## Features
+The platform helps users organize trips, manage travel budgets, maintain packing checklists, and save important travel notes — all in one place.
 
-- User Authentication
+---
+
+## 🚀 Features
+
+- User Authentication (Login & Signup)
 - Create Trips
 - Edit Trips
 - Delete Trips
 - View Trip Details
-- Image Support
+- Budget Planner
+- Packing Checklist
+- Trip Notes
 - Responsive UI
-- Dark Mode
+- Dark Modern Theme
+- Image Support for Trips
 
-## Tech Stack
+---
+
+## 🛠️ Tech Stack
 
 ### Frontend
 - Angular
@@ -28,7 +37,21 @@ TravelLoop is a full-stack travel planning web application built using Angular, 
 ### Database
 - MySQL
 
-## Installation
+---
+
+## 📂 Project Structure
+
+```bash
+traveloop/
+│
+├── traveloop-frontend/
+│
+└── traveloop-backend/
+```
+
+---
+
+## ⚙️ Installation
 
 ### Frontend
 
@@ -44,6 +67,19 @@ npm install
 node server.js
 ```
 
-## Author
+---
+
+## 🌐 Future Improvements
+
+- AI Trip Planner
+- Hotel Recommendations
+- Maps Integration
+- Expense Analytics
+- Cloud Deployment
+- JWT Authentication
+
+---
+
+## 👩‍💻 Author
 
 Anshika Singh
