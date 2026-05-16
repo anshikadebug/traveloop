@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { NavbarComponent } from '../../components/navbar/navbar';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    FormsModule,
+    NavbarComponent
+  ],
   templateUrl: './login.html',
-  styleUrls: ['./login.css']
+  styleUrl: './login.css'
 })
-export class LoginComponent {
+export class Login {
 
   email = '';
   password = '';
@@ -21,29 +24,46 @@ export class LoginComponent {
     private router: Router
   ) {}
 
-  login() {
-    const data = {
+  login(){
+
+    const loginData = {
+
       email: this.email,
       password: this.password
+
     };
 
-    this.http.post('https://traveloop-production-a086.up.railway.app/', data)
-      .subscribe({
-        next: (res: any) => {
+    this.http.post<any>(
 
-          localStorage.setItem('token', res.token);
+      'http://localhost:3000/login',
 
-          alert('Login successful 🔥');
+      loginData
 
-          // redirect to trips page
-          this.router.navigate(['/trips']);
-        },
+    ).subscribe({
 
-        error: (err) => {
-          console.log(err);
-          alert('Invalid login ❌');
-        }
-      });
+      next:(response)=>{
+
+        localStorage.setItem(
+          'user',
+          JSON.stringify(response.user)
+        );
+
+        alert('Login Successful ✅');
+
+        this.router.navigate(['/my-trips']);
+
+      },
+
+      error:(error)=>{
+
+        console.log(error);
+
+        alert('Invalid Credentials ❌');
+
+      }
+
+    });
+
   }
-  
+
 }

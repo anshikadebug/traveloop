@@ -1,0 +1,22 @@
+.login-container{
+  width:350px;
+  margin:100px auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid gray;
+}
+
+button{
+  padding:12px;
+  border:none;
+  border-radius:8px;
+  background:#0077ff;
+  color:white;
+  cursor:pointer;
+}

@@ -1,33 +1,62 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { NavbarComponent } from '../../components/navbar/navbar';
 
 @Component({
   selector: 'app-signup',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    FormsModule,
+    NavbarComponent
+  ],
   templateUrl: './signup.html',
-  styleUrls: ['./signup.css']
+  styleUrl: './signup.css'
 })
-export class SignupComponent {
+export class Signup {
 
   name = '';
   email = '';
   password = '';
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient
+  ) {}
 
-  signup() {
-    const data = {
+  signup(){
+
+    const userData = {
+
       name: this.name,
       email: this.email,
       password: this.password
+
     };
 
-    this.http.post('https://traveloop-production-a086.up.railway.app/', data)
-      .subscribe(() => {
-        alert('Signup successful 🚀');
-      });
+    this.http.post(
+
+      'http://localhost:3000/signup',
+
+      userData
+
+    ).subscribe({
+
+      next:()=>{
+
+        alert('Signup Successful ✅');
+
+      },
+
+      error:(error)=>{
+
+        console.log(error);
+
+        alert('Signup Failed ❌');
+
+      }
+
+    });
+
   }
+
 }

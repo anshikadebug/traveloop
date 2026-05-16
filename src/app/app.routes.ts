@@ -1,35 +1,39 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login';
-import { Dashboard } from './pages/dashboard/dashboard';
+
+import { Home } from './pages/home/home';
+import { Login } from './pages/login/login';
+import { Signup } from './pages/signup/signup';
 import { CreateTrip } from './pages/create-trip/create-trip';
 import { MyTrips } from './pages/my-trips/my-trips';
+import { TripDetails } from './pages/trip-details/trip-details';
 
 export const routes: Routes = [
-
   {
-    path:'',
-    redirectTo:'dashboard',
-    pathMatch:'full'
+    path: '',
+    component: Home
   },
-
   {
-    path:'login',
-   component: LoginComponent
+    path: 'login',
+    component: Login
   },
-
   {
-    path:'dashboard',
-    component: Dashboard
+    path: 'signup',
+    component: Signup
   },
-
   {
-    path:'create-trip',
+    path: 'create-trip',
     component: CreateTrip
   },
-
   {
-    path:'my-trips',
+    path: 'edit-trip/:id',
+    component: CreateTrip
+  },
+  {
+    path: 'my-trips',
     component: MyTrips
+  },
+  {
+    path: 'trip/:id',
+    component: TripDetails
   }
-
 ];

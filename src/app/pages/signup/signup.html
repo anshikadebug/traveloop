@@ -1,1 +1,29 @@
-<p>signup works!</p>
+<app-navbar></app-navbar>
+
+<div class="signup-container">
+
+  <h1>Create Account</h1>
+
+  <input
+    type="text"
+    placeholder="Name"
+    [(ngModel)]="name"
+  >
+
+  <input
+    type="email"
+    placeholder="Email"
+    [(ngModel)]="email"
+  >
+
+  <input
+    type="password"
+    placeholder="Password"
+    [(ngModel)]="password"
+  >
+
+  <button (click)="signup()">
+    Signup
+  </button>
+
+</div>

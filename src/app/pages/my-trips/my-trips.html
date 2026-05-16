@@ -1,19 +1,48 @@
-<h1>My Trips ✈️</h1>
+<app-navbar></app-navbar>
 
-@for (trip of trips; track trip.id) {
+<h1 class="title">My Trips ✈️</h1>
 
-  <div>
+@if (trips.length === 0) {
+  <p class="empty">No trips found. Create a new trip first.</p>
+}
 
-    <h2>{{ trip.trip_name }}</h2>
+<div class="trip-container">
 
-    <p>{{ trip.description }}</p>
+  <div class="trip-card" *ngFor="let trip of trips">
 
-    <p>
-      {{ trip.start_date }} to {{ trip.end_date }}
-    </p>
+    <img
+      [src]="trip.image_url || 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e'"
+      alt="Trip Image"
+    >
 
-    <hr>
+    <div class="card-content">
+
+      <h2>{{ trip.trip_name }}</h2>
+
+      <p>{{ trip.description }}</p>
+
+      <p class="date">
+        {{ trip.start_date | date }} → {{ trip.end_date | date }}
+      </p>
+
+      <div class="buttons">
+
+        <button class="view" (click)="openTrip(trip.id)">
+          View
+        </button>
+
+        <button class="edit" (click)="editTrip(trip)">
+          Edit
+        </button>
+
+        <button class="delete" (click)="deleteTrip(trip.id)">
+          Delete
+        </button>
+
+      </div>
+
+    </div>
 
   </div>
 
-}
+</div>

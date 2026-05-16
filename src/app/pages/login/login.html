@@ -1,19 +1,20 @@
+<app-navbar></app-navbar>
 
 <div class="login-container">
 
-  <h2>Login</h2>
+  <h1>Login</h1>
 
   <input
     type="email"
     placeholder="Email"
     [(ngModel)]="email"
-  />
+  >
 
   <input
     type="password"
     placeholder="Password"
     [(ngModel)]="password"
-  />
+  >
 
   <button (click)="login()">
     Login

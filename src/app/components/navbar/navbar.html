@@ -1,15 +1,34 @@
-<nav>
+<nav class="navbar">
 
-  <a routerLink="/dashboard">Dashboard</a>
+  <h2>TravelLoop ✈️</h2>
 
-  <a routerLink="/create-trip">Create Trip</a>
+  <div class="links">
 
-  <a routerLink="/my-trips">My Trips</a>
+    <a routerLink="/">Home</a>
 
-  <a routerLink="/budget">Budget</a>
+    <a routerLink="/create-trip">
+      Create Trip
+    </a>
 
-  <a routerLink="/packing-checklist">Packing</a>
+    <a routerLink="/my-trips">
+      My Trips
+    </a>
 
-  <a routerLink="/trip-notes">Notes</a>
+    <a routerLink="/signup">
+      Signup
+    </a>
+
+    <a routerLink="/login">
+      Login
+    </a>
+
+    <a routerLink="/logout">
+      Logout
+    </a>
+    <button (click)="toggleTheme()">
+  Mode
+</button>
+
+  </div>
 
 </nav>
