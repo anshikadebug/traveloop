@@ -1,1 +1,21 @@
-<p>packing-checklist works!</p>
+<app-navbar></app-navbar>
+
+<div class="page">
+  <h1>Packing Checklist 🎒</h1>
+
+  <div class="add-box">
+    <input type="text" placeholder="Add item" [(ngModel)]="item">
+    <button (click)="addItem()">Add</button>
+  </div>
+
+  @for (item of items; track $index) {
+    <div class="check-item">
+      <label>
+        <input type="checkbox" [(ngModel)]="item.packed">
+        <span [class.done]="item.packed">{{ item.name }}</span>
+      </label>
+
+      <button (click)="removeItem($index)">Remove</button>
+    </div>
+  }
+</div>

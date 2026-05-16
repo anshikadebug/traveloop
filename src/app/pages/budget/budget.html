@@ -1,1 +1,15 @@
-<p>budget works!</p>
+<app-navbar></app-navbar>
+
+<div class="page">
+  <h1>Trip Budget 💰</h1>
+
+  <input type="number" placeholder="Transport Cost" [(ngModel)]="transport">
+  <input type="number" placeholder="Stay Cost" [(ngModel)]="stay">
+  <input type="number" placeholder="Food Cost" [(ngModel)]="food">
+  <input type="number" placeholder="Activities Cost" [(ngModel)]="activities">
+
+  <div class="card">
+    <h2>Total Budget</h2>
+    <p>₹{{ total }}</p>
+  </div>
+</div>

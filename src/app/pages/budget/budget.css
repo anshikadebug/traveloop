@@ -1,0 +1,21 @@
+.page{
+  width:400px;
+  margin:50px auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.card{
+  padding:20px;
+  border-radius:14px;
+  background:#0077ff;
+  color:white;
+  text-align:center;
+}
